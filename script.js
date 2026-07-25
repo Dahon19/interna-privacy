@@ -2,7 +2,6 @@ const SITE_CONFIG = {
   effectiveDate: "May 24, 2026",
   contactEmail: "leaves0819@gmail.com",
   developerName: "Dahon",
-  portfolioUrl: "https://devdahon.github.io/portfolio",
 };
 
 function applyPolicyConfig() {
@@ -69,7 +68,24 @@ function setupActiveNavState() {
   }
 }
 
+function setupInteractiveEmailChip() {
+  const chip = document.getElementById("email-chip");
+  const tooltip = document.getElementById("email-copied");
+
+  if (!chip || !tooltip) return;
+
+  chip.addEventListener("click", () => {
+    navigator.clipboard.writeText(SITE_CONFIG.contactEmail).then(() => {
+      tooltip.classList.add("show");
+      setTimeout(() => {
+        tooltip.classList.remove("show");
+      }, 2000);
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   applyPolicyConfig();
   setupActiveNavState();
+  setupInteractiveEmailChip();
 });
