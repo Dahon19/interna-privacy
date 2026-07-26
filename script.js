@@ -2,7 +2,7 @@ const SITE_CONFIG = {
   effectiveDate: "May 24, 2026",
   contactEmail: "leaves0819@gmail.com",
   developerName: "Dahon",
-  portfolioUrl: "https://devdahon.github.io/",
+  portfolioUrl: "https://devdahon.github.io/portfolio/",
 };
 
 function applyPolicyConfig() {
