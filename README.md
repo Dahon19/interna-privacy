@@ -1,28 +1,46 @@
 # Interna Privacy Policy Site
 
-Plain static privacy-policy website for Interna, independently maintained by Dahon.
+Plain static privacy-policy website for Interna, independently maintained by DevDahon.
+
+## Current policy snapshot
+
+- Effective date: August 10, 2026
+- Audited app version: 1.0.5
+- Public URL: `https://devdahon.github.io/interna-privacy/`
+- Mobile app configuration: `EXPO_PUBLIC_PRIVACY_POLICY_URL`
+
+The policy currently reflects these app flows:
+
+- local-first profile, duty-log, timer, proof-photo, report, and reflection storage
+- optional AI processing through a Supabase Edge Function, with Gemini as the primary provider and xAI/NVIDIA retries
+- rewarded Google Mobile Ads and backend reward-credit verification
+- install, device-trust, hashed Android ID, hashed network address, and Play Integrity signals
+- local shift/timer reminders and the notification-only animated mascot guide
+- operating-system biometric authentication without biometric-template access
+- user-directed PDF, DOCX, CSV, documentation, and JSON backup sharing
+- JSON backups that include readable local records and embedded proof-photo data, but not AI credits
 
 ## Files
 
-- `index.html`
-- `styles.css`
-- `script.js`
+- `index.html` — policy content and semantic structure
+- `styles.css` — responsive light/dark presentation and print layout
+- `script.js` — policy metadata, theme preference, active section state, and accessible email copy feedback
+- `image.png` — Interna app icon
+- `app-ads.txt` — Google Mobile Ads publisher declaration
 
 ## Before publishing
 
-1. Update `script.js`:
+1. Review the mobile app source, not only its user-facing labels.
+2. Update `SITE_CONFIG` in `script.js`:
    - `effectiveDate`
+   - `appVersion`
    - `contactEmail`
-   - `developerName` if needed
-2. Keep `index.html` aligned with the live app behavior, especially:
-   - active AI providers
-   - weekly learning-note handling in AI narratives
-   - rewarded-ad credit handling
-   - anti-abuse / device-trust language
-   - backup and restore limitations for AI credits and local reflection notes
-3. Host the folder on a public static host.
-4. Copy the final public URL into Interna using `EXPO_PUBLIC_PRIVACY_POLICY_URL`.
+   - `developerName`
+   - `portfolioUrl`
+3. Recheck active AI providers, prompt contents, rewarded-credit logic, device-trust fields, permissions, backup contents, and notification behavior.
+4. Test at 375px and desktop widths in both themes, including keyboard focus and reduced motion.
+5. Keep the public folder independent from the portfolio root deployment and preserve `app-ads.txt`.
 
 ## Local preview
 
-Open `index.html` directly in a browser, or serve the folder with a simple static server.
+Serve the folder through a local static server so clipboard behavior and URL fragments can be tested in a browser.

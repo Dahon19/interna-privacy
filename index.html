@@ -1,262 +1,548 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07101f" />
   <title>Interna Privacy Policy</title>
-  <meta name="description" content="Privacy Policy for Interna, the OJT management companion for students." />
+  <meta
+    name="description"
+    content="How Interna stores OJT records, processes optional AI requests and rewarded ads, and gives students control over their data."
+  />
   <link rel="icon" type="image/png" href="./image.png" />
-
-  <!-- Modern Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-
   <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
-  <div class="app-container">
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-      <div>
-        <div class="sidebar-header">
-          <a href="#" class="brand-wrapper">
-            <div class="brand-logo-frame">
-              <img src="./image.png" alt="Interna logo" class="brand-logo" />
-            </div>
-            <div class="brand-details">
-              <span class="brand-name">&gt; Interna_</span>
-              <span class="brand-sub">Privacy Policy</span>
-            </div>
-          </a>
+  <a class="skip-link" href="#main-content">Skip to the privacy policy</a>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Privacy policy navigation">
+      <div class="sidebar-top">
+        <a href="#top" class="brand-wrapper" aria-label="Interna privacy policy home">
+          <span class="brand-logo-frame">
+            <img src="./image.png" alt="" class="brand-logo" width="52" height="52" />
+          </span>
+          <span class="brand-details">
+            <span class="brand-name">Interna</span>
+            <span class="brand-sub">Privacy Policy</span>
+          </span>
+        </a>
+
+        <div class="sidebar-actions">
+          <button
+            type="button"
+            class="icon-button theme-toggle"
+            id="theme-toggle"
+            aria-label="Switch to light theme"
+            title="Switch theme"
+          >
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+            </svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="status-card" aria-label="Policy status">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>
+          <strong>Matches the current app</strong>
+          <small>Reviewed <span data-effective-date>August 10, 2026</span></small>
+        </span>
+      </div>
+
+      <nav class="nav-menu" aria-label="Table of contents">
+        <div class="nav-group">
+          <p class="nav-section-title">Start here</p>
+          <a href="#overview" class="nav-link">At a glance</a>
+          <a href="#current-flow" class="nav-link">Current app flow</a>
         </div>
 
-        <nav class="nav-menu" aria-label="Table of Contents">
-          <div class="nav-group">
-            <div class="nav-section-title">Overview</div>
-            <a href="#who-we-are" class="nav-link">1. Who we are</a>
-            <a href="#data-we-handle" class="nav-link">2. Data we handle</a>
-            <a href="#how-we-use-data" class="nav-link">3. How we use data</a>
-          </div>
+        <div class="nav-group">
+          <p class="nav-section-title">Your data</p>
+          <a href="#on-device" class="nav-link">Stored on device</a>
+          <a href="#online-data" class="nav-link">Sent when online</a>
+          <a href="#ai" class="nav-link">AI reports</a>
+          <a href="#ads" class="nav-link">Rewarded ads</a>
+        </div>
 
-          <div class="nav-group">
-            <div class="nav-section-title">Services</div>
-            <a href="#ads-and-ai" class="nav-link">4. Ads, AI &amp; 3rd Parties</a>
-            <a href="#device-trust" class="nav-link">5. Anti-abuse</a>
-          </div>
+        <div class="nav-group">
+          <p class="nav-section-title">Controls</p>
+          <a href="#local-features" class="nav-link">Reminders &amp; security</a>
+          <a href="#permissions" class="nav-link">Permissions &amp; exports</a>
+          <a href="#retention" class="nav-link">Retention &amp; deletion</a>
+          <a href="#security" class="nav-link">Security</a>
+        </div>
 
-          <div class="nav-group">
-            <div class="nav-section-title">Data Policies</div>
-            <a href="#retention" class="nav-link">6. Retention</a>
-            <a href="#your-choices" class="nav-link">7. Your choices</a>
-            <a href="#security" class="nav-link">8. Security</a>
-            <a href="#audience" class="nav-link">9. Audience</a>
-          </div>
-
-          <div class="nav-group">
-            <div class="nav-section-title">Support</div>
-            <a href="#contact" class="nav-link">10. Contact</a>
-          </div>
-        </nav>
-      </div>
+        <div class="nav-group">
+          <p class="nav-section-title">About this policy</p>
+          <a href="#students" class="nav-link">Students &amp; workplaces</a>
+          <a href="#changes" class="nav-link">Changes</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </nav>
     </aside>
 
-    <!-- Main Content Area -->
-    <main class="content-area">
-      <header class="page-header">
+    <main class="content-area" id="main-content" tabindex="-1">
+      <header class="page-header" id="top">
         <div class="page-header-top">
-          <div class="badge-live">
-            <span class="badge-dot"></span>
-            <span>Effective May 24, 2026</span>
-          </div>
-
-          <a href="https://devdahon.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="portfolio-btn" data-portfolio-link title="View Developer Portfolio">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
+          <span class="policy-badge">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
+              <path d="m9 12 2 2 4-4"></path>
             </svg>
-            <span>Developer Profile</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
+            Current policy
+          </span>
+
+          <a
+            href="https://devdahon.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-link"
+            data-portfolio-link
+          >
+            Developer profile
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7M7 7h10v10"></path>
             </svg>
           </a>
         </div>
 
-        <h1>Privacy Policy</h1>
-        <p class="page-description">Official Privacy Policy for Interna — the OJT management companion for students.</p>
+        <p class="eyebrow">Interna <span aria-hidden="true">/</span> App version <span data-app-version>1.0.5</span></p>
+        <h1>Privacy, in plain language.</h1>
+        <p class="page-description">
+          Interna is a local-first OJT companion. Your ordinary profile, duty logs, timer sessions,
+          proof photos, reflections, and saved reports stay on your device unless you choose a
+          feature that sends or shares them.
+        </p>
 
-        <div class="meta-bar">
-          <span>[EFFECTIVE_DATE]: <strong data-effective-date>May 24, 2026</strong></span>
-          <span>[DEVELOPER]: <strong data-developer-name>Dahon</strong></span>
+        <div class="meta-bar" aria-label="Policy details">
+          <span><small>Effective</small><strong data-effective-date>August 10, 2026</strong></span>
+          <span><small>Developer</small><strong data-developer-name>DevDahon</strong></span>
+          <span><small>Account required</small><strong>No</strong></span>
         </div>
       </header>
 
-      <!-- Section 1: Who we are -->
-      <section id="who-we-are" class="doc-section">
-        <h2><span class="section-num">01.</span> Who we are</h2>
-        <p>Interna is an OJT management companion designed for students. It helps users track work logs, attach
-          documentation photos, export reports, and generate narrative reports with AI assistance when online.</p>
-        <p>Most day-to-day tracking features can be used offline. Internet access is mainly needed for AI generation
-          attempts, rewarded ads, and related backend protections. Interna is independently developed and maintained by
-          <strong data-developer-name>Dahon</strong>.
+      <section id="overview" class="doc-section" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <span class="section-num">01</span>
+          <div>
+            <p class="section-kicker">Quick summary</p>
+            <h2 id="overview-title">What matters most</h2>
+          </div>
+        </div>
+
+        <div class="summary-grid">
+          <article class="summary-card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 8h10M7 12h7M7 16h4"></path></svg>
+            </span>
+            <div><h3>Local by default</h3><p>Routine OJT records are stored in the app's local device storage, not synced to an Interna account.</p></div>
+          </article>
+
+          <article class="summary-card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"></path><path d="M5 21h14"></path></svg>
+            </span>
+            <div><h3>Online features are optional</h3><p>AI generation and rewarded ads need internet access. Core logging, timers, local reports, and offline drafts do not.</p></div>
+          </article>
+
+          <article class="summary-card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 7 9 18l-5-5"></path></svg>
+            </span>
+            <div><h3>No voice or location tracking</h3><p>The animated mascot does not listen or record audio. Interna has no current precise-location feature.</p></div>
+          </article>
+
+          <article class="summary-card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-6 6v3l-2 3h16l-2-3V9a6 6 0 0 0-6-6Z"></path><path d="M10 19h4"></path></svg>
+            </span>
+            <div><h3>Reminders stay local</h3><p>Shift reminders are scheduled by your device. Interna does not register a remote push token for this flow.</p></div>
+          </article>
+        </div>
+
+        <div class="plain-note">
+          <strong>This summary is only a guide.</strong>
+          The sections below explain the complete current behavior, including optional AI and advertising services.
+        </div>
+      </section>
+
+      <section id="current-flow" class="doc-section" aria-labelledby="flow-title">
+        <div class="section-heading">
+          <span class="section-num">02</span>
+          <div>
+            <p class="section-kicker">How information moves</p>
+            <h2 id="flow-title">The current app flow</h2>
+          </div>
+        </div>
+
+        <ol class="flow-list" aria-label="Interna data flow">
+          <li class="flow-step">
+            <span class="flow-number">1</span>
+            <div><h3>You record your OJT work</h3><p>Profile details, logs, timer data, photos, notes, and saved reports are written to local app storage.</p></div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-number">2</span>
+            <div><h3>You choose what happens next</h3><p>You can keep working offline, export a file, make a backup, request an AI report, or watch a rewarded ad.</p></div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-number">3</span>
+            <div><h3>Only the selected feature receives data</h3><p>Exports go to the destination you choose. AI prompts go to the AI processing chain. Ad interactions go to Google Mobile Ads and the credit backend.</p></div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-number">4</span>
+            <div><h3>Results return to the device</h3><p>Generated text is shown in Interna and is saved locally only when you save it. Earned credits are verified against backend records.</p></div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="on-device" class="doc-section" aria-labelledby="device-title">
+        <div class="section-heading">
+          <span class="section-num">03</span>
+          <div>
+            <p class="section-kicker">Local storage</p>
+            <h2 id="device-title">Information stored on your device</h2>
+          </div>
+        </div>
+
+        <div class="data-map">
+          <article>
+            <h3>Profile and OJT settings</h3>
+            <p>Student name, course, school, company, supervisor, required hours, OJT date range, working-week preference, reminder times, theme, and biometric-lock preference.</p>
+          </article>
+          <article>
+            <h3>Duty records and timer sessions</h3>
+            <p>Dates, tasks, quantities, time-in and time-out values, record type, timestamps, and an active timer session if one is running.</p>
+          </article>
+          <article>
+            <h3>Proof photos and captions</h3>
+            <p>Photos selected from the library or captured with the camera, plus local file details, documentation captions, and notes attached to a log.</p>
+          </article>
+          <article>
+            <h3>Reports and learning notes</h3>
+            <p>Saved narrative text, report date ranges, weekly learning reflections, suggestion timestamps, and locally generated offline report content.</p>
+          </article>
+          <article>
+            <h3>App state</h3>
+            <p>Onboarding completion, local AI-credit state, notification settings, and an installation identifier. On supported native devices, the installation identifier is kept in secure storage.</p>
+          </article>
+          <article>
+            <h3>Generated files</h3>
+            <p>Temporary or exported PDF, DOCX, CSV, documentation, and JSON backup files created when you choose an export or backup action.</p>
+          </article>
+        </div>
+
+        <div class="callout callout-success">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          <p><strong>No routine cloud sync.</strong> The current app does not upload ordinary profile records, work logs, saved reports, or proof photos to an Interna user account.</p>
+        </div>
+      </section>
+
+      <section id="online-data" class="doc-section" aria-labelledby="online-title">
+        <div class="section-heading">
+          <span class="section-num">04</span>
+          <div>
+            <p class="section-kicker">Optional network use</p>
+            <h2 id="online-title">Information sent when online features are used</h2>
+          </div>
+        </div>
+
+        <div class="network-list">
+          <article class="network-row">
+            <div><span class="network-label">AI generation</span><h3>Selected report prompt</h3></div>
+            <p>Selected profile fields, work-log text and time details, prior internship-log context, and an optional weekly learning note.</p>
+            <p class="network-recipient">Supabase Edge Function, then Gemini; retry providers may include xAI Grok and NVIDIA.</p>
+          </article>
+          <article class="network-row">
+            <div><span class="network-label">Quota and protection</span><h3>Install and device signals</h3></div>
+            <p>Install ID, app/build version, platform and device details, hashed Android ID where available, hashed network address, timestamps, trust status, and optional Play Integrity results.</p>
+            <p class="network-recipient">Supabase backend and Google Play Integrity on supported Android builds.</p>
+          </article>
+          <article class="network-row">
+            <div><span class="network-label">Rewarded ads</span><h3>Ad and reward activity</h3></div>
+            <p>Ad interactions plus reward-session, status, transaction, ad-unit, timestamp, device-credit, and fraud-prevention details.</p>
+            <p class="network-recipient">Google Mobile Ads and Supabase reward-credit backend.</p>
+          </article>
+          <article class="network-row">
+            <div><span class="network-label">Connectivity check</span><h3>Basic network request</h3></div>
+            <p>Before an AI request, the native app contacts a Google connectivity endpoint to determine whether the internet is reachable. Ordinary request metadata, including an IP address, may be visible to that service.</p>
+            <p class="network-recipient">Google connectivity service.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="ai" class="doc-section" aria-labelledby="ai-title">
+        <div class="section-heading">
+          <span class="section-num">05</span>
+          <div>
+            <p class="section-kicker">AI assistance</p>
+            <h2 id="ai-title">AI reports and learning-note suggestions</h2>
+          </div>
+        </div>
+
+        <p>
+          AI is used only after you request a narrative report or a weekly learning-note suggestion.
+          Interna builds a text prompt from relevant data for the selected report range. That prompt can include your
+          name, course, school, company, supervisor, current and previous work-log text, dates, quantities, time ranges,
+          and an optional weekly learning note.
+        </p>
+        <p>
+          <strong>Proof photos are not included in the current AI prompt.</strong> The prompt passes through Interna's
+          Supabase Edge Function and is sent to Google Gemini first. If a retryable service error occurs, the same prompt
+          may be retried through xAI Grok and then an NVIDIA-hosted model. The function records prompt length in its
+          application log, not the prompt text, but platform invocation logs and each provider's own processing rules may apply.
+        </p>
+        <p>
+          AI output is returned to Interna and shown for review. It becomes a saved narrative only when you save it.
+          AI text can be incorrect or incomplete; review it before submitting it to a school, coordinator, or supervisor.
+        </p>
+
+        <div class="callout callout-warning">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.3 2.9 1.8 17a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 2.9a2 2 0 0 0-3.4 0Z"></path><path d="M12 9v4M12 17h.01"></path></svg>
+          <p><strong>Before using AI:</strong> avoid entering passwords, financial information, government identifiers, confidential workplace information, or personal details about another person unless you have permission.</p>
+        </div>
+
+        <div class="provider-links" aria-label="AI and backend provider policies">
+          <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Privacy<span aria-hidden="true">↗</span></a>
+          <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener noreferrer">Gemini API Terms<span aria-hidden="true">↗</span></a>
+          <a href="https://x.ai/legal/privacy-policy" target="_blank" rel="noopener noreferrer">xAI Privacy<span aria-hidden="true">↗</span></a>
+          <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank" rel="noopener noreferrer">NVIDIA Privacy<span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section id="ads" class="doc-section" aria-labelledby="ads-title">
+        <div class="section-heading">
+          <span class="section-num">06</span>
+          <div>
+            <p class="section-kicker">Optional mobile feature</p>
+            <h2 id="ads-title">Rewarded ads and AI credits</h2>
+          </div>
+        </div>
+
+        <p>
+          On Android and iOS builds, you can choose to watch a rewarded ad to earn an additional AI-report credit.
+          Interna requests non-personalized ads, but the Google Mobile Ads SDK can still automatically process an IP
+          address, general location estimated from that address, app interactions such as ad views and taps, diagnostics,
+          and device or account identifiers for advertising, analytics, and fraud prevention.
+        </p>
+        <p>
+          Interna creates a time-limited reward session before showing an ad. The backend stores the session status,
+          install and device bucket, reward amount and type, ad-unit and transaction details when provided, timestamps,
+          and verification results. This prevents a reward from being reused or claimed for a different installation.
+        </p>
+        <p>
+          The current app starts with a local free allowance and later provides a recurring weekly free allowance.
+          Rewarded credits have a separate backend weekly limit. Exact credit limits may change without changing the
+          categories of information described here. Watching an ad is optional; you can continue using offline reports
+          and the rest of the app without watching one.
+        </p>
+
+        <div class="provider-links">
+          <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener noreferrer">Google Mobile Ads data disclosure<span aria-hidden="true">↗</span></a>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy<span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section id="local-features" class="doc-section" aria-labelledby="local-title">
+        <div class="section-heading">
+          <span class="section-num">07</span>
+          <div>
+            <p class="section-kicker">On-device assistance</p>
+            <h2 id="local-title">Reminders, mascot guidance, and biometric lock</h2>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article>
+            <h3>Shift reminders</h3>
+            <p>If enabled, Interna asks for notification permission and schedules clock-in, clock-out, and long-running-timer reminders through the device operating system. Reminder times are saved locally.</p>
+          </article>
+          <article>
+            <h3>Notification mascot</h3>
+            <p>When the app opens from a displayed reminder, the animated mascot repeats the notification and shows the next step. This is a visual animation: it does not use speech recognition, a microphone, or remote AI, and it does not upload the notification text.</p>
+          </article>
+          <article>
+            <h3>In-app notices</h3>
+            <p>The notification panel inside Interna calculates profile, logging, progress, and deadline notices locally from your settings and logs. Those notices are not received from a remote messaging service.</p>
+          </article>
+          <article>
+            <h3>Biometric lock</h3>
+            <p>If enabled, Interna asks the operating system to confirm your enrolled fingerprint, face, iris, or device credential. Interna receives only the authentication result and does not receive or store your biometric template.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="permissions" class="doc-section" aria-labelledby="permissions-title">
+        <div class="section-heading">
+          <span class="section-num">08</span>
+          <div>
+            <p class="section-kicker">Your device controls</p>
+            <h2 id="permissions-title">Permissions, backups, and exports</h2>
+          </div>
+        </div>
+
+        <ul class="check-list">
+          <li><strong>Camera and photo library:</strong> requested only when you choose to take or attach a proof image. You can keep logs without photos.</li>
+          <li><strong>Notifications and alarms:</strong> used for optional shift and timer reminders. You can disable reminders in Interna or revoke notification access in device settings.</li>
+          <li><strong>Biometrics:</strong> used only for the optional app lock. You can turn the lock off in Interna.</li>
+          <li><strong>Files and sharing:</strong> used when you select a backup to restore or choose where to save or share a PDF, DOCX, CSV, photo report, or JSON backup.</li>
+          <li><strong>Internet:</strong> used for AI generation, rewarded ads, credit and trust checks, provider-policy links, and the privacy-policy page.</li>
+        </ul>
+
+        <p>
+          Interna's current feature flow does not use precise location or microphone recording. Device settings may show
+          permissions contributed by underlying app modules; the app source does not contain a current location-tracking
+          or audio-recording feature.
+        </p>
+
+        <div class="callout callout-danger">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
+          <p><strong>Protect your backup file.</strong> An Interna JSON backup can contain readable profile information, duty logs, saved narratives, weekly notes, and proof photos encoded inside the file. It is not separately password-protected or encrypted by Interna. Anyone with the file may be able to read its contents.</p>
+        </div>
+
+        <p>
+          Backups include logs, proof photos, settings, saved narratives, and weekly learning notes. They do not include
+          or restore AI credits, reward-credit records, backend trust decisions, or the secure installation identifier.
+          Restoring a backup overwrites the matching local data currently in the app.
         </p>
       </section>
 
-      <!-- Section 2: Data we handle -->
-      <section id="data-we-handle" class="doc-section">
-        <h2><span class="section-num">02.</span> What data Interna handles</h2>
-        <div class="data-grid">
-          <div class="data-card">
-            <h3>Profile and settings</h3>
-            <p>Interna stores user-entered profile details such as student name, course, school, company name,
-              supervisor name, OJT date range, and required hours.</p>
-          </div>
-
-          <div class="data-card">
-            <h3>Work logs, learning notes, and saved reports</h3>
-            <p>Interna stores work logs, dates, time ranges, task descriptions, quantities, captions, optional
-              week-specific learning notes, and saved narrative reports locally on the device.</p>
-          </div>
-
-          <div class="data-card">
-            <h3>Proof photos</h3>
-            <p>Interna can capture or select proof images for documentation. These images are stored and used locally on
-              the device and are not uploaded in the normal app flow.</p>
-          </div>
-
-          <div class="data-card">
-            <h3>Technical and device data</h3>
-            <p>Interna and its integrated services may process install identifiers, device trust signals, app version
-              details, Android-specific identifiers, diagnostics, and app interaction data needed for protected AI and
-              rewarded-ad features.</p>
+      <section id="retention" class="doc-section" aria-labelledby="retention-title">
+        <div class="section-heading">
+          <span class="section-num">09</span>
+          <div>
+            <p class="section-kicker">Keeping and removing data</p>
+            <h2 id="retention-title">Retention and your choices</h2>
           </div>
         </div>
+
+        <div class="retention-list">
+          <article>
+            <h3>On-device data</h3>
+            <p>Remains until you edit or delete it, restore another backup over it, clear the app's storage, or uninstall the app. Files you exported or shared must be deleted separately from their saved destination.</p>
+          </article>
+          <article>
+            <h3>Backend usage, reward, and trust records</h3>
+            <p>The current backend uses these records for quotas, reward verification, security, and reinstall-abuse prevention. The current app schema does not define an automatic deletion schedule, so records may remain until they are removed through operational retention or a verified request, subject to security and legal needs.</p>
+          </article>
+          <article>
+            <h3>AI prompts and provider data</h3>
+            <p>Interna's quota and trust database does not intentionally save the text of the AI prompt. The prompt is processed through an Edge Function and an AI provider. Provider and platform logs or retention practices may apply according to their current terms and service plan.</p>
+          </article>
+          <article>
+            <h3>No account deletion screen</h3>
+            <p>Interna has no current account or login flow, so it has no account-deletion portal. For backend privacy requests, contact the email below. Additional information may be needed to locate a pseudonymous install or device record, and matching may be limited.</p>
+          </article>
+        </div>
+
+        <p>
+          You can avoid sending an AI prompt by using the offline report option. You can avoid advertising-related
+          processing by not starting a rewarded ad. You can revoke app permissions through your device settings.
+        </p>
       </section>
 
-      <!-- Section 3: How we use data -->
-      <section id="how-we-use-data" class="doc-section">
-        <h2><span class="section-num">03.</span> How data is used</h2>
-        <ul>
-          <li>To operate the app's OJT logging, reporting, and export features.</li>
-          <li>To support offline-first tracking with local device storage.</li>
-          <li>To generate AI narrative reports based on user-entered profile details, work-log content, and optional
-            week-specific learning notes.</li>
-          <li>To provide rewarded-ad credits and enforce weekly generation limits.</li>
-          <li>To protect the app from automated abuse, reinstall abuse, and suspicious usage patterns.</li>
-          <li>To maintain app stability, diagnostics, and service reliability.</li>
-        </ul>
-      </section>
-
-      <!-- Section 4: Ads, AI, and third-party services -->
-      <section id="ads-and-ai" class="doc-section">
-        <h2><span class="section-num">04.</span> Ads, AI, and third-party services</h2>
-        <div class="data-grid">
-          <div class="data-card">
-            <h3>Supabase</h3>
-            <p>Interna uses Supabase Edge Functions and related backend services for AI requests, reward-credit
-              handling, and trust or quota enforcement.</p>
-          </div>
-
-          <div class="data-card">
-            <h3>Google Gemini, xAI Grok, and NVIDIA</h3>
-            <p>When AI narrative generation is used, prompt content may include user-entered profile details, work-log
-              data, prior internship-log context, and optional week-specific learning notes. Requests may be processed
-              through Google Gemini, xAI Grok, or NVIDIA hosted models.</p>
-          </div>
-
-          <div class="data-card">
-            <h3>Google Mobile Ads (AdMob)</h3>
-            <p>Interna uses AdMob for rewarded ads. This may involve diagnostics, app interaction data, device
-              identifiers, and conservative approximate-location handling derived from network context. Interna does not
-              provide a user-facing precise-location feature.</p>
+      <section id="security" class="doc-section" aria-labelledby="security-title">
+        <div class="section-heading">
+          <span class="section-num">10</span>
+          <div>
+            <p class="section-kicker">Reasonable safeguards</p>
+            <h2 id="security-title">Security and international processing</h2>
           </div>
         </div>
+
+        <p>
+          Interna uses encrypted HTTPS connections for supported backend, AI, advertising, and policy requests. Native
+          installations use secure device storage for the installation identifier where supported, and the optional
+          biometric lock relies on the operating system. Ordinary local logs and photos rely on the device's app sandbox
+          and operating-system protections; Interna does not separately end-to-end encrypt every local record or exported file.
+        </p>
+        <p>
+          Supabase, Google, xAI, and NVIDIA may process information in countries outside your own. Privacy and data-protection
+          rules can differ between countries. No digital system is completely secure, so protect your device, screen lock,
+          proof photos, exported reports, and backup files.
+        </p>
       </section>
 
-      <!-- Section 5: Device trust and anti-abuse -->
-      <section id="device-trust" class="doc-section">
-        <h2><span class="section-num">05.</span> Device trust and anti-abuse protections</h2>
-        <p>Interna uses technical signals to reduce abuse of AI generation and rewarded credits. On supported Android
-          builds, this may include Play Integrity verification, device-trust data, install identifiers, Android-specific
-          identifiers, and request-specific trust metadata.</p>
-        <p>These protections are used to detect suspicious reinstall patterns, repeated abuse attempts, invalid
-          rewarded-credit claims, and repeated AI usage attempts that exceed configured trust thresholds. This system
-          does not require account creation or login.</p>
+      <section id="students" class="doc-section" aria-labelledby="students-title">
+        <div class="section-heading">
+          <span class="section-num">11</span>
+          <div>
+            <p class="section-kicker">Educational use</p>
+            <h2 id="students-title">Students, workplaces, and other people</h2>
+          </div>
+        </div>
+
+        <p>
+          Interna is designed for OJT and internship record-keeping. It is not directed to young children. Students who
+          are not legally able to consent on their own should use the app only with appropriate parent, guardian, school,
+          or institutional guidance.
+        </p>
+        <p>
+          Before photographing a workplace, document, colleague, customer, patient, or screen, make sure you have permission
+          and follow your employer's or school's rules. Do not place confidential workplace or third-party personal information
+          in an AI prompt unless you are authorized to do so.
+        </p>
       </section>
 
-      <!-- Section 6: How long data is retained -->
-      <section id="retention" class="doc-section">
-        <h2><span class="section-num">06.</span> How long data is retained</h2>
-        <ul>
-          <li>Settings, logs, photos, optional weekly learning notes, and saved reports remain on-device until the user
-            deletes them, uninstalls the app, clears app data, or replaces them through restore operations.</li>
-          <li>Backend reward, usage, and trust records may be retained for quota management, fraud prevention,
-            diagnostics, and operational review.</li>
-          <li>AI request content may be processed by backend and AI service providers according to their operational and
-            legal retention practices.</li>
-          <li>Backup and restore flows can include local weekly learning notes and saved narrative content, but they do
-            not restore AI credits; AI credit state may be tracked separately from the local backup file.</li>
-        </ul>
+      <section id="changes" class="doc-section" aria-labelledby="changes-title">
+        <div class="section-heading">
+          <span class="section-num">12</span>
+          <div>
+            <p class="section-kicker">Policy updates</p>
+            <h2 id="changes-title">Changes to this policy</h2>
+          </div>
+        </div>
+
+        <p>
+          This policy may be updated when Interna's data handling, providers, permissions, or features change. The effective
+          date at the top will be updated when a revised policy is published. Material changes should be reviewed before
+          continuing to use the affected online feature.
+        </p>
       </section>
 
-      <!-- Section 7: Your choices -->
-      <section id="your-choices" class="doc-section">
-        <h2><span class="section-num">07.</span> Your controls and limitations</h2>
-        <p>Interna does not offer an account-based self-service deletion portal. Users can manage most local app data
-          directly on their device by editing or deleting logs, removing local content, restoring backups, or
-          uninstalling the app.</p>
-        <p>Because AI credits, backend trust decisions, and rewarded-credit usage are protected operational records,
-          those records are not fully controlled through the app's local delete flows.</p>
-        <p>Users may also contact the privacy email listed below for privacy-related questions about the current app
-          behavior.</p>
-      </section>
+      <section id="contact" class="doc-section" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <span class="section-num">13</span>
+          <div>
+            <p class="section-kicker">Questions and requests</p>
+            <h2 id="contact-title">Contact</h2>
+          </div>
+        </div>
 
-      <!-- Section 8: Security practices -->
-      <section id="security" class="doc-section">
-        <h2><span class="section-num">08.</span> Security practices</h2>
-        <p>Interna uses encrypted network connections for supported backend, AI, and ad-related requests. As with any
-          digital service, no system can guarantee absolute security, but reasonable technical measures are used to
-          protect data in transit and limit abuse.</p>
-      </section>
-
-      <!-- Section 9: Children and educational use -->
-      <section id="audience" class="doc-section">
-        <h2><span class="section-num">09.</span> Children and educational use</h2>
-        <p>Interna is intended for students and educational or OJT-related use. It is not designed as a general
-          children's app for young children. Institutions and users should review this policy before using the app in
-          formal academic settings.</p>
-      </section>
-
-      <!-- Section 10: Privacy contact -->
-      <section id="contact" class="doc-section">
-        <h2><span class="section-num">10.</span> Privacy contact</h2>
         <div class="contact-card">
-          <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">If you have privacy
-            questions about Interna, contact:</p>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span>Email:</span>
-            <button type="button" class="copy-email-chip" id="email-chip" title="Click to copy email">
+          <div>
+            <p class="contact-label">Interna privacy contact</p>
+            <a class="contact-email" data-contact-link href="mailto:rodallenagregado19@gmail.com">
               <span data-contact-email>rodallenagregado19@gmail.com</span>
-            </button>
+            </a>
+            <p>Describe your question or request and the app platform you use. Do not email passwords, biometric data, or full proof-photo archives.</p>
           </div>
+          <button type="button" class="copy-button" id="email-chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy email
+          </button>
+          <p class="copy-status" id="email-copied" role="status" aria-live="polite"></p>
         </div>
       </section>
 
-      <!-- Footer -->
       <footer class="page-footer">
         <div>
-          Interna &copy; 2026 • Developed by <strong data-developer-name>Dahon</strong>
+          <strong>Interna</strong>
+          <span>Developed by <span data-developer-name>DevDahon</span></span>
         </div>
+        <p>This static policy page uses no advertising or analytics. If you change the theme, that preference is stored only in your browser.</p>
+        <p>&copy; <span data-current-year>2026</span> Interna</p>
       </footer>
     </main>
   </div>
-
-  <script src="./script.js"></script>
 </body>
 
 </html>
