@@ -4,7 +4,7 @@ Plain static privacy-policy website for Interna, independently maintained by Dev
 
 ## Current policy snapshot
 
-- Effective date: August 10, 2026
+- Effective date: August 15, 2026
 - Audited app version: 1.0.5
 - Public URL: `https://devdahon.github.io/interna-privacy/`
 - Mobile app configuration: `EXPO_PUBLIC_PRIVACY_POLICY_URL`
@@ -27,6 +27,9 @@ The policy currently reflects these app flows:
 - `script.js` — policy metadata, theme preference, active section state, and accessible email copy feedback
 - `image.png` — Interna app icon
 - `app-ads.txt` — Google Mobile Ads publisher declaration
+- `robots.txt` — Search engine crawling directives
+- `sitemap.xml` — Canonical sitemap declaration
+- `.nojekyll` — GitHub Pages static asset bypass
 
 ## Before publishing
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devdahon.github.io/interna-privacy/sitemap.xml

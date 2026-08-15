@@ -1,6 +1,6 @@
 const SITE_CONFIG = {
-  effectiveDate: "August 10, 2026",
-  contactEmail: "rodallenagregado19@gmail.com",
+  effectiveDate: "August 15, 2026",
+  contactEmail: "devdahon@northeasterncollege.edu.ph",
   developerName: "DevDahon",
   appVersion: "1.0.5",
   portfolioUrl: "https://devdahon.github.io/",
@@ -99,6 +99,9 @@ function setupActiveNavState() {
 
   if (!sectionEntries.length) return;
 
+  let isClickScrolling = false;
+  let clickTimeout = null;
+
   const syncActive = (activeSelector) => {
     sectionEntries.forEach(({ link, selector }) => {
       const isActive = selector === activeSelector;
@@ -109,28 +112,43 @@ function setupActiveNavState() {
   };
 
   sectionEntries.forEach(({ link, selector }) => {
-    link.addEventListener("click", () => syncActive(selector));
+    link.addEventListener("click", () => {
+      isClickScrolling = true;
+      syncActive(selector);
+      clearTimeout(clickTimeout);
+      clickTimeout = setTimeout(() => {
+        isClickScrolling = false;
+      }, 900);
+    });
   });
 
-  syncActive(sectionEntries[0].selector);
+  const onScroll = () => {
+    if (isClickScrolling) return;
 
-  if (!("IntersectionObserver" in window)) return;
+    // If near the bottom of the page, activate the last section (#contact)
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    if (scrollPosition >= documentHeight - 80) {
+      syncActive(sectionEntries[sectionEntries.length - 1].selector);
+      return;
+    }
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    // Determine current active section based on scroll offset
+    const offset = 200;
+    let currentActive = sectionEntries[0].selector;
 
-      if (visible?.target?.id) syncActive(`#${visible.target.id}`);
-    },
-    {
-      rootMargin: "-18% 0px -65% 0px",
-      threshold: [0.05, 0.25, 0.6],
-    },
-  );
+    for (const { selector, section } of sectionEntries) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= offset) {
+        currentActive = selector;
+      }
+    }
 
-  sectionEntries.forEach(({ section }) => observer.observe(section));
+    syncActive(currentActive);
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 }
 
 async function copyText(value) {

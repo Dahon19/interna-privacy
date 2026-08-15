@@ -272,6 +272,7 @@ html[data-theme="light"] .theme-icon-sun {
 .nav-menu {
   display: grid;
   gap: 22px;
+  margin-top: 28px;
 }
 
 .nav-section-title {
