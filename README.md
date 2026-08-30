@@ -4,8 +4,8 @@ Plain static privacy-policy website for Interna, independently maintained by Dev
 
 ## Current policy snapshot
 
-- Effective date: August 15, 2026
-- Audited app version: 1.0.5
+- Effective date: August 30, 2026
+- Audited app version: 1.0.6
 - Public URL: `https://devdahon.github.io/interna-privacy/`
 - Mobile app configuration: `EXPO_PUBLIC_PRIVACY_POLICY_URL`
 
@@ -14,11 +14,12 @@ The policy currently reflects these app flows:
 - local-first profile, duty-log, timer, proof-photo, report, and reflection storage
 - optional AI processing through a Supabase Edge Function, with Gemini as the primary provider and xAI/NVIDIA retries
 - rewarded Google Mobile Ads and backend reward-credit verification
-- install, device-trust, hashed Android ID, hashed network address, and Play Integrity signals
+- pseudonymous service-operation, usage-limit, reward-validation, and platform-integrity data
 - local shift/timer reminders and the notification-only animated mascot guide
 - operating-system biometric authentication without biometric-template access
 - user-directed PDF, DOCX, CSV, documentation, and JSON backup sharing
 - JSON backups that include readable local records and embedded proof-photo data, but not AI credits
+- accurate retention, permission, deletion, and consent-choice descriptions for the current app
 
 ## Files
 

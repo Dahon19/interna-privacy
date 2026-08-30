@@ -1,8 +1,8 @@
 const SITE_CONFIG = {
-  effectiveDate: "August 15, 2026",
+  effectiveDate: "August 30, 2026",
   contactEmail: "devdahon@northeasterncollege.edu.ph",
   developerName: "DevDahon",
-  appVersion: "1.0.5",
+  appVersion: "1.0.6",
   portfolioUrl: "https://devdahon.github.io/",
 };
 
