@@ -460,14 +460,6 @@ h1 {
   color: var(--primary);
 }
 
-.manual-actions {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 32px;
-}
-
 .manual-primary-action {
   min-height: 48px;
   display: inline-flex;
@@ -1477,7 +1469,7 @@ html[data-theme="light"] .app-showcase {
   }
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1280px) {
   .app-showcase {
     grid-template-columns: 1fr;
   }
@@ -1585,11 +1577,6 @@ html[data-theme="light"] .app-showcase {
 
   .header-page-link {
     align-self: flex-start;
-  }
-
-  .manual-actions {
-    align-items: flex-start;
-    flex-direction: column;
   }
 
   .manual-overview,
