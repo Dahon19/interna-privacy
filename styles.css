@@ -411,6 +411,68 @@ h1 {
   line-height: 1.7;
 }
 
+.page-header-with-mascot {
+  position: relative;
+  min-height: 470px;
+  padding-right: clamp(210px, 21vw, 270px);
+}
+
+.page-mascot {
+  position: absolute;
+  top: 108px;
+  right: clamp(0px, 2vw, 30px);
+  width: clamp(170px, 16vw, 210px);
+  margin: 0;
+  text-align: center;
+}
+
+.page-mascot-art {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-mascot-halo {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  width: 112%;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--primary) 32%, transparent);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary-soft), transparent 68%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.page-mascot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 26px rgba(0, 0, 0, 0.24));
+}
+
+.page-mascot figcaption {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  margin-top: -20px;
+  padding: 7px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg-elevated) 92%, transparent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(12px);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.page-mascot figcaption strong {
+  color: var(--primary);
+}
+
 .meta-bar {
   flex-wrap: wrap;
   gap: 10px;
@@ -1553,6 +1615,19 @@ html[data-theme="light"] .app-showcase {
 
   .content-area {
     padding: 48px 28px 64px;
+  }
+
+  .page-header-with-mascot {
+    min-height: 0;
+    padding-right: 0;
+  }
+
+  .page-mascot {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 170px;
+    margin: 26px 0 0 auto;
   }
 
   .doc-section,
