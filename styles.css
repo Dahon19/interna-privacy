@@ -140,7 +140,6 @@ button:focus-visible,
 .status-card,
 .page-header-top,
 .policy-badge,
-.portfolio-link,
 .section-heading,
 .summary-card,
 .flow-step,
@@ -339,8 +338,7 @@ html[data-theme="light"] .theme-icon-sun {
   gap: 16px;
 }
 
-.policy-badge,
-.portfolio-link {
+.policy-badge {
   min-height: 44px;
   gap: 8px;
   border-radius: 999px;
@@ -356,7 +354,6 @@ html[data-theme="light"] .theme-icon-sun {
 }
 
 .policy-badge svg,
-.portfolio-link svg,
 .card-icon svg,
 .callout svg,
 .copy-button svg {
@@ -368,24 +365,6 @@ html[data-theme="light"] .theme-icon-sun {
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-.portfolio-link {
-  padding: 8px 14px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text-secondary);
-  text-decoration: none;
-}
-
-.portfolio-link:hover {
-  border-color: var(--border-strong);
-  color: var(--text);
-}
-
-.portfolio-link svg {
-  width: 15px;
-  height: 15px;
 }
 
 .eyebrow,
@@ -529,60 +508,18 @@ html[data-theme="light"] .app-showcase {
   color: var(--showcase-muted);
 }
 
-.play-store-button {
-  display: inline-flex;
-  min-height: 58px;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 18px;
-  border: 1px solid rgba(92, 160, 255, 0.58);
-  border-radius: 16px;
-  background: #155fc7;
-  color: #ffffff;
-  box-shadow: 0 16px 34px rgba(0, 116, 255, 0.28);
-  text-decoration: none;
+.google-play-badge-link {
+  display: inline-block;
+  width: 190px;
+  min-height: 44px;
+  line-height: 0;
   touch-action: manipulation;
-  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.play-store-button:hover {
-  color: #ffffff;
-  box-shadow: 0 20px 42px rgba(0, 152, 255, 0.36);
-  transform: translateY(-2px);
-}
-
-.play-store-button:active {
-  transform: translateY(0);
-}
-
-.play-store-button svg {
-  width: 28px;
-  height: 28px;
-  flex: 0 0 auto;
-  fill: currentColor;
-}
-
-.play-store-button span {
-  display: grid;
-  text-align: left;
-}
-
-.play-store-button small {
-  font-size: 0.68rem;
-  font-weight: 650;
-  line-height: 1;
-}
-
-.play-store-button strong {
-  margin-top: 3px;
-  font-size: 1rem;
-  line-height: 1.1;
-}
-
-.showcase-note {
-  margin: 13px 0 0 !important;
-  color: var(--showcase-subtle) !important;
-  font-size: 0.75rem;
+.google-play-badge-link img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .showcase-visual {
@@ -1397,8 +1334,7 @@ html[data-theme="light"] .app-showcase {
     flex-direction: column;
   }
 
-  .policy-badge,
-  .portfolio-link {
+  .policy-badge {
     align-self: flex-start;
   }
 
@@ -1427,9 +1363,8 @@ html[data-theme="light"] .app-showcase {
     max-width: none;
   }
 
-  .play-store-button {
-    width: 100%;
-    justify-content: center;
+  .google-play-badge-link {
+    width: 180px;
   }
 
   .showcase-visual {
@@ -1600,7 +1535,6 @@ html[data-theme="light"] .app-showcase {
 
   .sidebar,
   .skip-link,
-  .portfolio-link,
   .theme-toggle,
   .copy-button,
   .app-showcase {
