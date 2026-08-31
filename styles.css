@@ -761,8 +761,7 @@ html[data-theme="light"] .app-showcase {
 
 .showcase-visual {
   position: relative;
-  min-height: 590px;
-  perspective: 1300px;
+  min-height: 620px;
   z-index: 2;
 }
 
@@ -770,147 +769,48 @@ html[data-theme="light"] .app-showcase {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: min(470px, 88%);
+  width: min(520px, 90%);
   aspect-ratio: 1;
-  border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
-  border-radius: 46% 54% 55% 45% / 42% 44% 56% 58%;
-  background: color-mix(in srgb, var(--primary) 7%, transparent);
-  transform: translate(-50%, -50%) rotate(10deg);
+  border: 1px solid color-mix(in srgb, var(--primary) 34%, transparent);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, color-mix(in srgb, var(--primary) 16%, transparent), transparent 64%),
+    color-mix(in srgb, var(--primary) 5%, transparent);
+  box-shadow:
+    0 0 0 54px color-mix(in srgb, var(--primary) 4%, transparent),
+    0 0 80px color-mix(in srgb, var(--primary) 20%, transparent);
+  transform: translate(-50%, -48%);
 }
 
-.dashboard-phone {
+.showcase-halo::before,
+.showcase-halo::after {
+  position: absolute;
+  border: 1px solid color-mix(in srgb, var(--primary) 21%, transparent);
+  border-radius: 50%;
+  content: "";
+  inset: 10%;
+}
+
+.showcase-halo::after {
+  border-color: color-mix(in srgb, #49d8ff 26%, transparent);
+  inset: 24%;
+}
+
+.showcase-mascot {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: min(272px, 70vw);
+  width: min(500px, 92%);
   margin: 0;
-  transform: translate(-48%, -54%) rotateY(-17deg) rotateX(3deg) rotateZ(2deg);
-  transform-style: preserve-3d;
-  animation: showcase-phone-float 5.5s ease-in-out infinite;
+  filter: drop-shadow(0 28px 38px rgba(3, 17, 40, 0.28));
+  transform: translate(-50%, -49%);
   z-index: 2;
 }
 
-.dashboard-phone::before,
-.dashboard-phone::after {
-  position: absolute;
-  content: "";
-  pointer-events: none;
-}
-
-.dashboard-phone::before {
-  inset: 7px -14px -14px 9px;
-  border: 1px solid rgba(8, 15, 27, 0.9);
-  border-radius: 50px;
-  background: linear-gradient(145deg, #34445c 0%, #111b2b 38%, #03070d 100%);
-  box-shadow: 12px 18px 30px rgba(0, 0, 0, 0.3);
-  transform: translateZ(-20px);
-  z-index: -2;
-}
-
-.dashboard-phone::after {
-  top: 54px;
-  right: -13px;
-  bottom: 52px;
-  width: 17px;
-  border-radius: 0 12px 12px 0;
-  background: linear-gradient(90deg, #26364d, #07101d 72%);
-  box-shadow: 6px 2px 14px rgba(0, 0, 0, 0.28);
-  transform: translateZ(-8px);
-  z-index: -1;
-}
-
-.dashboard-phone-frame {
-  position: relative;
-  overflow: visible;
-  padding: 10px 9px 12px;
-  border: 2px solid #1a2739;
-  border-radius: 49px;
-  background: linear-gradient(145deg, #2f4058 0%, #0a121e 22%, #02050a 78%, #27364b 100%);
-  box-shadow:
-    -32px 38px 68px rgba(0, 0, 0, 0.34),
-    20px 14px 44px rgba(24, 135, 255, 0.24),
-    inset 2px 1px 1px rgba(255, 255, 255, 0.32),
-    inset -3px -2px 5px rgba(0, 0, 0, 0.7);
-  transform-style: preserve-3d;
-}
-
-.dashboard-phone-frame::before {
-  position: absolute;
-  top: 7px;
-  left: 50%;
-  width: 56px;
-  height: 5px;
-  border-radius: 999px;
-  background: #02050a;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12);
-  content: "";
-  transform: translateX(-50%);
-  z-index: 3;
-}
-
-.dashboard-phone-frame::after {
-  position: absolute;
-  top: 112px;
-  right: -6px;
-  width: 5px;
-  height: 66px;
-  border: 1px solid #02050a;
-  border-radius: 0 4px 4px 0;
-  background: linear-gradient(90deg, #53637a, #111a27);
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.35);
-  content: "";
-}
-
-.dashboard-screen {
-  overflow: hidden;
-  border: 1px solid rgba(210, 226, 245, 0.34);
-  border-radius: 39px;
-  background: #f4f7fb;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.16);
-}
-
-.dashboard-phone img {
+.showcase-mascot img {
   display: block;
-  width: calc(100% + 12px);
+  width: 100%;
   height: auto;
-  margin: -6px;
-  border-radius: 34px;
-}
-
-.phone-volume {
-  position: absolute;
-  top: 94px;
-  left: -6px;
-  width: 5px;
-  height: 44px;
-  border: 1px solid #02050a;
-  border-radius: 4px 0 0 4px;
-  background: linear-gradient(90deg, #111a27, #53637a);
-  box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.phone-volume::after {
-  position: absolute;
-  top: 54px;
-  left: -1px;
-  width: 5px;
-  height: 44px;
-  border: 1px solid #02050a;
-  border-radius: 4px 0 0 4px;
-  background: linear-gradient(90deg, #111a27, #53637a);
-  content: "";
-}
-
-.dashboard-phone figcaption {
-  position: absolute;
-  top: calc(100% + 16px);
-  left: 50%;
-  width: 290px;
-  color: var(--showcase-subtle);
-  font-size: 0.7rem;
-  line-height: 1.45;
-  text-align: center;
-  transform: translateX(-50%) rotateZ(-2deg);
 }
 
 .showcase-feature-cards {
@@ -935,6 +835,7 @@ html[data-theme="light"] .app-showcase {
   background: var(--showcase-card);
   box-shadow: 0 18px 40px rgba(3, 18, 42, 0.2);
   backdrop-filter: blur(18px);
+  will-change: transform;
 }
 
 .showcase-feature-card > span:last-child {
@@ -976,28 +877,65 @@ html[data-theme="light"] .app-showcase {
 }
 
 .feature-card-timer {
-  top: 11%;
-  left: 0;
+  top: 2%;
+  left: -1%;
+  animation: orbit-card-a 7s ease-in-out infinite;
 }
 
 .feature-card-proof {
-  top: 43%;
-  right: 0;
+  top: 44%;
+  right: -1%;
+  animation: orbit-card-b 8s ease-in-out infinite;
 }
 
 .feature-card-reports {
-  bottom: 11%;
-  left: 2%;
+  bottom: 10%;
+  left: 3%;
+  animation: orbit-card-c 7.5s ease-in-out infinite;
 }
 
-@keyframes showcase-phone-float {
+@keyframes orbit-card-a {
   0%,
   100% {
-    transform: translate(-48%, -54%) rotateY(-17deg) rotateX(3deg) rotateZ(2deg);
+    transform: translate3d(0, 0, 0);
   }
 
-  50% {
-    transform: translate(-48%, calc(-54% - 10px)) rotateY(-13deg) rotateX(2deg) rotateZ(1deg);
+  33% {
+    transform: translate3d(12px, -10px, 0);
+  }
+
+  66% {
+    transform: translate3d(20px, 8px, 0);
+  }
+}
+
+@keyframes orbit-card-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  33% {
+    transform: translate3d(-14px, 12px, 0);
+  }
+
+  66% {
+    transform: translate3d(-20px, -8px, 0);
+  }
+}
+
+@keyframes orbit-card-c {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  33% {
+    transform: translate3d(18px, 8px, 0);
+  }
+
+  66% {
+    transform: translate3d(8px, -12px, 0);
   }
 }
 
@@ -1629,11 +1567,11 @@ html[data-theme="light"] .app-showcase {
   }
 
   .showcase-visual {
-    min-height: 550px;
+    min-height: 570px;
   }
 
-  .dashboard-phone {
-    width: min(226px, 65vw);
+  .showcase-mascot {
+    width: min(420px, 96%);
   }
 
   .showcase-feature-card {
@@ -1737,16 +1675,11 @@ html[data-theme="light"] .app-showcase {
   }
 
   .showcase-visual {
-    min-height: 510px;
+    min-height: 520px;
   }
 
-  .dashboard-phone {
-    width: min(204px, 64vw);
-  }
-
-  .dashboard-phone figcaption {
-    width: 226px;
-    font-size: 0.66rem;
+  .showcase-mascot {
+    width: min(370px, 98%);
   }
 
   .showcase-feature-card {
