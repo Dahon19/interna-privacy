@@ -318,13 +318,6 @@ html[data-theme="light"] .theme-icon-sun {
   content: "";
 }
 
-.nav-link-page {
-  margin-bottom: 8px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-}
-
 .content-area {
   width: auto;
   max-width: 1600px;
@@ -684,11 +677,6 @@ h1 {
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
   background: linear-gradient(135deg, var(--surface), var(--primary-soft));
-}
-
-.page-footer a {
-  font-weight: 700;
-  text-decoration: none;
 }
 
 .meta-bar strong {
